@@ -130,6 +130,14 @@
 	accent-color: #2b2b2b;
 }
 
+.register-link {
+	cursor: pointer;
+}
+
+.register-link:hover {
+	text-decoration: underline;
+}
+
 .login-submit {
 	margin-top: 12px;
 	width: 100%;
