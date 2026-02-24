@@ -1,0 +1,405 @@
+.home-container {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  display: flex;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 240px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styles */
+.home-header {
+  background-color: white;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 1rem 2rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.search-input {
+  width: 400px;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.search-input:focus {
+  border-color: #8b7355;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.notification-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.user-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.user-role {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8b7355, #a68968);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Main Content */
+.home-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Title Section */
+.title-section {
+  margin-bottom: 2rem;
+}
+
+.title-section h1 {
+  font-size: 2.5rem;
+  color: #2c2c2c;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+  font-family: 'Playfair Display', serif;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.stat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.stat-title {
+  font-size: 0.85rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-icon {
+  font-size: 1.5rem;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c2c2c;
+  margin-bottom: 0.5rem;
+}
+
+.stat-subtitle {
+  font-size: 0.85rem;
+  color: #999;
+}
+
+.stat-subtitle.up {
+  color: #4caf50;
+}
+
+.stat-subtitle.warning {
+  color: #ff9800;
+}
+
+/* Content Grid */
+.content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.section-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+  font-size: 1.25rem;
+  color: #2c2c2c;
+  font-weight: 600;
+}
+
+.view-all-link {
+  color: #8b7355;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.view-all-link:hover {
+  text-decoration: underline;
+}
+
+/* Orders Table */
+.orders-table {
+  overflow-x: auto;
+}
+
+.orders-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.orders-table th {
+  text-align: left;
+  padding: 0.75rem;
+  font-size: 0.75rem;
+  color: #999;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.orders-table td {
+  padding: 1rem 0.75rem;
+  border-bottom: 1px solid #f0f0f0;
+  color: #333;
+}
+
+.order-id {
+  font-weight: 600;
+  color: #2c2c2c;
+}
+
+.order-amount {
+  font-weight: 600;
+  color: #2c2c2c;
+}
+
+.status-badge {
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.status-badge.shipped {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status-badge.pending {
+  background-color: #fff3e0;
+  color: #e65100;
+}
+
+.status-badge.processing {
+  background-color: #e3f2fd;
+  color: #1565c0;
+}
+
+/* Top Selling Items */
+.top-selling-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.product-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.product-item:hover {
+  background-color: #f5f5f5;
+}
+
+.product-image {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.product-details {
+  flex: 1;
+}
+
+.product-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #2c2c2c;
+  margin-bottom: 0.25rem;
+}
+
+.product-stock {
+  font-size: 0.85rem;
+  color: #999;
+  margin: 0;
+}
+
+.product-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2c2c2c;
+}
+
+/* Footer */
+.home-footer {
+  padding: 2rem 0;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #999;
+  font-size: 0.85rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-links a {
+  color: #999;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #8b7355;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+  }
+
+  .home-header {
+    padding: 1rem;
+  }
+
+  .header-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .title-section h1 {
+    font-size: 1.75rem;
+  }
+
+  .home-footer {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
