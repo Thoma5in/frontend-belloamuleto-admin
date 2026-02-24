@@ -2,15 +2,12 @@
 import { useState } from 'react';
 import brandIcon from '../../assets/icons/icono-bello-amuleto.png';
 import './Login.css';
-import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 	
 
-
-	const navigate = useNavigate();
 	return (
 		<div className="login-page">
 			<div className="login-brand" aria-label="Bello Amuleto">
@@ -50,11 +47,6 @@ const Login = () => {
 									autoComplete="new-password"
 								/>
 							</div>
-
-							<p>¿Olvidaste tu contraseña?</p>
-							<p>¿No tienes una cuenta? <a className='register-link' onClick={() => navigate('/register')}>Registrate</a></p>
-
-							
 
 							<button className="login-submit" type="submit">Iniciar Sesión</button>
 						</form>
