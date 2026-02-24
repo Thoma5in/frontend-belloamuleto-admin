@@ -1,21 +1,16 @@
 //Fomulario para iniciar sesión 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import brandIcon from '../../assets/icons/icono-bello-amuleto.png';
 import './Login.css';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 	
 
-	const onSubmit = (e: React.FormEvent) => {
-		e.preventDefault();
-		// UI-only screen (no backend yet)
-		void email;
-		void password;
-		
-	};
 
+	const navigate = useNavigate();
 	return (
 		<div className="login-page">
 			<div className="login-brand" aria-label="Bello Amuleto">
@@ -29,7 +24,7 @@ const Login = () => {
 					<div className="login-card-inner">
 						<h1 id="login-title" className="login-title">Iniciar Sesión Administradores</h1>
 
-						<form className="login-form" onSubmit={onSubmit}>
+						<form className="login-form" >
 							<div className="login-field">
 								<label className="login-label" htmlFor="login-email">Correo</label>
 								<input
@@ -55,6 +50,9 @@ const Login = () => {
 									autoComplete="new-password"
 								/>
 							</div>
+
+							<p>¿Olvidaste tu contraseña?</p>
+							<p>¿No tienes una cuenta? <a className='register-link' onClick={() => navigate('/register')}>Registrate</a></p>
 
 							
 
