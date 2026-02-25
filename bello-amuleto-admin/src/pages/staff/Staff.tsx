@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Staff.css';
 
 interface Employee {
@@ -12,6 +13,7 @@ interface Employee {
 }
 
 const Staff: React.FC = () => {
+  const navigate = useNavigate();
   const [employees] = useState<Employee[]>([
     {
       id: 1,
@@ -64,7 +66,9 @@ const Staff: React.FC = () => {
             <h1 className="staff-title">Gestión de Personal</h1>
             <p className="staff-subtitle">Administre el equipo de artesanos y ventas de la boutique</p>
           </div>
-          <button className="new-employee-btn">💼 Nuevo Empleado</button>
+          <button className="new-employee-btn" onClick={() => navigate('/staff/nuevo')}>
+            💼 Nuevo Empleado
+          </button>
         </div>
 
         {/* Statistics Cards */}

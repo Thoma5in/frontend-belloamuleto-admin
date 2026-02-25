@@ -4,6 +4,7 @@ import Login from './pages/login/Login';
 import Home from './pages/home/Home';
 import Staff from './pages/staff/Staff';
 import LeftSideBar from './components/sidebar/LeftSideBar';
+import CreateUserForm from './components/create-user/CreateUserForm';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path = "/" element = {<Home />} />
           <Route path = "/login" element = {<Login />} />
           <Route path='/staff' element={<Staff />} />
+          <Route path='/staff/nuevo' element={<CreateUserForm />} />
           <Route path = "*" element = {<div className="not-found">Página no encontrada</div>} />
         </Routes>
         </main>
