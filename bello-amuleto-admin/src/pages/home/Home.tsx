@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import LeftSideBar from '../../components/sidebar/LeftSideBar';
+
 
 
 
@@ -100,7 +100,7 @@ const Home: React.FC = () => {
 
   return (
     <div className="home-container">
-      <LeftSideBar />
+
       <div className="main-content">
         {/* Header */}
         <div className="home-header">
