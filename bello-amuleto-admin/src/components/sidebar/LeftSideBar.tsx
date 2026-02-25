@@ -1,52 +1,56 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './LeftSideBar.css';
 
 interface MenuItem {
   icon: string;
   label: string;
-  active?: boolean;
+  path: string;
 }
 
 const LeftSideBar: React.FC = () => {
+  const location = useLocation();
+
   const menuItems: MenuItem[] = [
-    { icon: '📊', label: 'Dashboard', active: true },
-    { icon: '📦', label: 'Ordenes', active: false },
-    { icon: '📋', label: 'Inventario', active: false },
-    { icon: '👥', label: 'Clientes', active: false },
-    { icon: '📈', label: 'Analíticas', active: false },
+    { icon: '📊', label: 'Dashboard', path: '/' },
+    { icon: '📦', label: 'Ordenes', path: '/ordenes' },
+    { icon: '📋', label: 'Inventario', path: '/inventario' },
+    { icon: '👥', label: 'Clientes', path: '/clientes' },
+    { icon: '📈', label: 'Analíticas', path: '/analiticas' },
+    { icon: '👤', label: 'Personal', path: '/staff' },
   ];
 
   return (
     <aside className="left-sidebar">
       {/* Logo Section */}
-      <div className="sidebar-logo">
+      <Link to="/" className="sidebar-logo">
         <div className="logo-icon">💎</div>
         <div className="logo-text">
           <span className="logo-title">Bello Amuleto</span>
           <span className="logo-subtitle">ADMIN</span>
         </div>
-      </div>
+      </Link>
 
       {/* Navigation Menu */}
       <nav className="sidebar-nav">
         {menuItems.map((item, index) => (
-          <a
+          <Link
             key={index}
-            href="#"
-            className={`nav-item ${item.active ? 'active' : ''}`}
+            to={item.path}
+            className={`nav-item ${location.pathname === item.path ? 'active' : ''}`}
           >
             <span className="nav-icon">{item.icon}</span>
             <span className="nav-label">{item.label}</span>
-          </a>
+          </Link>
         ))}
       </nav>
 
       {/* Settings at bottom */}
       <div className="sidebar-footer">
-        <a href="#" className="nav-item">
+        <Link to="/settings" className="nav-item">
           <span className="nav-icon">⚙️</span>
           <span className="nav-label">Settings</span>
-        </a>
+        </Link>
       </div>
     </aside>
   );
